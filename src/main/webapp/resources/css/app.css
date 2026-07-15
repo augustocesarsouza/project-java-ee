@@ -1,0 +1,97 @@
+body.app-body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+.layout-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: #0f172a;
+    color: #ffffff;
+}
+
+.brand {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-badge {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+}
+
+.content-shell {
+    flex: 1;
+    padding: 2rem;
+}
+
+.auth-wrapper {
+    max-width: 460px;
+    margin: 3rem auto;
+}
+
+.auth-panel,
+.hero-panel,
+.stat-card {
+    border-radius: 14px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+}
+
+.full-width-button {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.helper-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.page-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.hero-text h2 {
+    margin-top: 0;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.feature-list {
+    margin: 0;
+    padding-left: 1.2rem;
+}

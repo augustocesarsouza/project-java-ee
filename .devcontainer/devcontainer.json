@@ -1,0 +1,10 @@
+{
+  "forwardPorts": [1455],
+  "portsAttributes": {
+    "1455": {
+      "label": "Codex Login",
+      "visibility": "public",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}

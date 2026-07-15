@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<ui:composition template="/WEB-INF/templates/default.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="jakarta.faces.core"
+                xmlns:h="jakarta.faces.html"
+                xmlns:ui="jakarta.faces.facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <f:metadata>
+        <f:viewAction action="#{sessionBean.ensureAuthenticated}" />
+    </f:metadata>
+
+    <ui:define name="title">Área interna</ui:define>
+
+    <ui:define name="content">
+        <div class="page-grid">
+            <p:messages showDetail="true" closable="true" />
+
+            <p:panel header="Bem-vindo" styleClass="hero-panel">
+                <h:panelGroup layout="block" styleClass="hero-text">
+                    <h2>Olá, #{sessionBean.userName}</h2>
+                    <p>Seu projeto já tem autenticação e uma base pronta para crescer com novos módulos.</p>
+                </h:panelGroup>
+            </p:panel>
+
+            <div class="dashboard-cards">
+                <p:panel header="Usuários cadastrados" styleClass="stat-card">
+                    <h3>#{dashboardBean.totalUsers}</h3>
+                </p:panel>
+
+                <p:panel header="Próximo passo" styleClass="stat-card">
+                    <p>Adicionar produtos, categorias, pedidos ou qualquer outro módulo de negócio.</p>
+                </p:panel>
+            </div>
+
+            <p:panel header="Estrutura sugerida para evolução">
+                <ul class="feature-list">
+                    <li>entidades JPA em <code>model</code></li>
+                    <li>regras de negócio em <code>service</code></li>
+                    <li>beans JSF/CDI em <code>web</code></li>
+                    <li>páginas protegidas em <code>/app</code></li>
+                </ul>
+            </p:panel>
+        </div>
+    </ui:define>
+</ui:composition>
+
